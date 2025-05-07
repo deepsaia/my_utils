@@ -81,7 +81,7 @@ class TOCGenerator:
         self.read_file()
         self.extract_headings()
         if not self.headings:
-            print("⚠️ No valid markdown headings (## to ######) found.")
+            print("[!] No valid markdown headings (## to ######) found.")
             return
 
         self.update_lines()
@@ -89,7 +89,7 @@ class TOCGenerator:
             self.preview_toc()
         else:
             self.write_file()
-            print(f"✅ TOC updated in {self.filepath}")
+            print(f"[Success] TOC updated in {self.filepath}")
 
 
 def main():
@@ -102,7 +102,7 @@ def main():
         toc = TOCGenerator(args.file)
         toc.generate(dry_run=args.dry_run)
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"[x] Error: {e}")
 
 
 if __name__ == "__main__":
