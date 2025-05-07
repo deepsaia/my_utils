@@ -74,7 +74,7 @@ class TOCGenerator:
             f.writelines(self.updated_lines)
 
     def preview_toc(self):
-        print("📝 Preview of TOC:\n")
+        print("[Preview] Preview of TOC:\n")
         print("".join(self.build_toc_block()))
 
     def generate(self, dry_run=False):
